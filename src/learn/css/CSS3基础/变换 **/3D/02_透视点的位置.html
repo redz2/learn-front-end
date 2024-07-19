@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .outer {
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 200px;
+            border: 2px solid black;
+            transform-style: preserve-3d;
+            perspective: 500px;
+            perspective-origin: 102px 102px;
+        }
+        .inner {
+            height: 200px;
+            width: 200px;
+            background-color: skyblue;
+            transform: rotateX(30deg) translateZ(60px)
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            您好啊!
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+1. 父元素开启3D空间
+transform-style: preserve-3d;
+2. 设置景深（其实就是眼睛到z=0平面的距离）
+perspective: 500px;
+3. 设置透视点的位置（其实就是眼睛的位置）
+perspective-origin: 102px 102px;（默认是中心点，一般也不用调整）
+
+-->

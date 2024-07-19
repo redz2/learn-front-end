@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="nav">
+        我是一段文字
+    </div>
+    <hr> 
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+
+    <button>按钮</button>
+
+
+    <script>
+        // 获取DOM元素
+        const nav = document.querySelector('.nav')
+        nav.style.color = 'red'
+        // 获取多个DOM元素（得到的是一个伪数组，没有pop、push方法）
+        const li = document.querySelectorAll('ul li')
+        for(let i = 0;i<li.length;i++){
+            li[i].style.color = 'red'
+        }
+        // 操作元素
+        // 读取元素内容
+        console.log(nav.innerText)
+        console.log(nav.innerHTML)
+        // 修改元素内容
+        nav.innerText = "修改成另外一段文字，不解析标签"
+        nav.innerHTML = '<strong>innerHTML解析标签</strong>'
+
+        // 操作元素属性
+
+        // 操作样式(多组单词改成小驼峰写法)
+        // 1. 对象.style.样式属性 = '值'
+        nav.style.fontSize = '100px'
+        nav.style.backgroundColor = 'gray'
+
+        // 2. 通过类名的方式操作(但是会覆盖掉其他的类名，没法用)
+        // 元素.className = "active"
+
+        // 3. 通过ClassList(最好的解决方案)
+        // nav.ClassList.add('类名')
+        // nav.ClassList.remove('类名')
+        // nav.ClassList.toggle('类名') 有就删掉，没有就加上
+
+
+        // 事件监听
+        // params: 事件类型
+        document.querySelector('button').addEventListener('click', function(){
+            // 事件对象(EventObject)
+            // type:事件的类型,比如"click"、"mouseover"、"keydown"等
+            // target:触发事件的元素,即事件的目标元素
+            // currentTarget:事件当前正在处理的元素
+            // preventDefault():取消事件的默认行为,比如点击链接时阻止跳转
+            // stopPropagation():阻止事件继续传播,停止事件在DOM中的冒泡或捕获
+            // stoplmmediatePropagation():阻止后续事件处理器被调用
+            event.target.innerText = '已点击'
+            event.target.style.backgroundColor = 'pink'
+            console.log(event.bubbles);
+        })
+
+
+        // 可以监听哪些事件？（和伪类对比下？）
+        // 鼠标
+        // click:鼠标单击事件
+        // dblclick:鼠标双击事件
+        // mousedown:鼠标按下事件
+        // mouseup:鼠标释放事件
+        // mouseover:鼠标移入事件
+        // mouseout:鼠标移出事件
+        // mousemove:鼠标移动事件
+        // contextmenu:鼠标右键菜单事件
+
+        // 键盘
+        // keydown:按键按下事件
+        // keypress:按键按下且字符被输入到可编辑区域事件
+        // keyup:按键释放事件
+
+
+        // 表单
+        // submit:表单提交事件
+        // reset:表单重置事件
+        // focus:元素获得焦点事件
+        // blur:元素失去焦点事件
+        // change:元素值改变事件
+        // input:元素输入事件(输入框)
+
+        // 其它
+        // load:文档或资源加载完成事件
+        // resize:窗口大小改变事件
+        // scroll:滚动条滚动事件
+        // drag:拖动操作进行中事件
+
+
+        //图片元素
+        // var myImage = document.getElementById('myImage')
+        // //事件监听
+        // myImage.addEventListener('load', function{
+        //     console.log('加载完成');
+        // })
+        
+    </script>
+    <style>
+
+    </style>
+</body>
+</html>

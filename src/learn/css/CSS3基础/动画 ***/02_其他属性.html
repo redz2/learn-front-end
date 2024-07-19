@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .outer:hover .inner {
+            animation-play-state: paused;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            animation-name: my;
+            animation-duration: 3s;
+            animation-delay: 0.1ms;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes my {
+            0% {}
+            50% {
+                transform: translateX(450px) rotateZ(180deg);
+                background-color: red;
+            }
+            100% {
+                transform: translateX(900px) rotateZ(360deg);
+                background-color: black;
+                border-radius: 50%;
+            }
+        }   
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
+
+<!-- 
+设置动画的方式
+animation-timing-function: linear|steps();
+
+动画播放的次数
+animation-iteration-count: infinite;
+
+动画播放的方向
+animation-direction: alternate; 往复运动（reverse|alternate-reverse）
+
+动画以外的状态（不发生动画的时候在哪里）
+animation-fill-mode: forwards; 禁止到最后一帧（backwards：第一帧）
+
+动画的播放的状态(鼠标悬停暂停播放)
+animation-play-state: paused;（默认是running）
+-->

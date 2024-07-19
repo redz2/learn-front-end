@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>监听鼠标位置</title>
+  <style>
+    .box {
+      width: 1000px;
+      height: 400px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body onmousemove="handleMouseMove(event)">
+
+  <div class="box">
+    
+  </div>
+  <script>
+    var lastX = 0
+    var lastY = 0
+
+    function handleMouseMove(event) {
+      var x = event.clientX;
+      var y = event.clientY;
+      if (Math.abs(x - lastX) > 5 || Math.abs(y - lastY) > 5) {
+        lastX = x;
+        lastY = y;
+        // 下一次页面绘制时触发
+        requestAnimationFrame(()=>{
+          console.log(`当前鼠标位置：${x} ${y}`)
+          // const box = document.querySelector('.box')
+          box.textContent = `当前鼠标位置：${x} ${y}`
+        })
+      }
+    }
+
+    const box = document.querySelector('.box')
+    box.addEventListener(onmousemove, handleMouseMove)
+
+
+  </script>
+
+</body>
+
+</html>

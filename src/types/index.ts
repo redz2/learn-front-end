@@ -1,4 +1,4 @@
-// 定义一个接口，用于限制person对象的具体类型
+// 定义一个接口，用于限制Person对象的具体类型
 export interface PersonInter {
     id: string,
     name: string,
@@ -6,6 +6,6 @@ export interface PersonInter {
     x?: number, // 可以不写
 }
 
-// 一个自定义类型
+// 一个自定义类型: Persons
 // export type Persons = Array<PersonInter>
 export type Persons = PersonInter[]

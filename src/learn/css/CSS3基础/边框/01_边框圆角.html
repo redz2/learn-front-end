@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>01_边框圆角</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            margin-left: 0 auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
+<!--  
+1. 如果超过高度或宽度的一般，不会再继续变化了
+
+2. 父元素宽或高的50%，就是一个圆了
+border-radius: 50%; 
+
+3. 单独设置每一个角
+border-top-left-radius: 10px 5px;
+border-top-right-radius: 10px 5px;
+border-bottom-right-radius: 20px;
+border-bottom-left-radius: 20px;
+
+4. 这是一个椭圆，几乎不用
+border-radius: 10px 5px;
+
+5. 第三种写法的复合写法，几乎不用
+border-radius: 左上一 右上一 右下一 左下一 左上二 右上二 右下二 左下二;
+-->

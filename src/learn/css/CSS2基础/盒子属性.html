@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <span>
+                我是一段文字
+            </span>
+            <br>
+            <span>
+                我是一段文字
+            </span>
+        </div>
+    </div>
+
+    <style>
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+        .outer {
+            width: 400px;
+            height: 200px;
+            border: 1px solid gray;
+            background-color: bisque;
+        }
+        .inner {
+            /* 宽 */
+            width: 200px;
+            /* 高 */
+            height: 100px;
+            /* 外边距 */
+            margin: 5px; /* 已经不属于box了，背景不会覆盖 */
+            /* 边框 */
+            border: 2px solid gray;
+            /* 内边距 */
+            padding: 4px;
+            /* 字体颜色 */
+            color: black;
+            /* 字体大小 */
+            font: 4px;
+            /* 行高 */
+            line-height: normal; /* 文字肯定在每一行的中间，这就是为什么把line-height设置成div的高度，文字就会垂直居中 */
+            /* 字体间隔 */
+            letter-spacing: 3px;
+            /* 背景颜色 */
+            background-color: orange;
+        }
+        span {
+            background-color: aqua; /* inline背景和block背景的区别 */
+        }
+    </style>
+</body>
+</html>

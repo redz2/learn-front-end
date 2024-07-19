@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        .inner {
+            width: 100px;
+            height: 500px;
+            background-color: skyblue;
+            animation-name: wyd2;
+            animation-duration: 3s;
+            animation-delay: 1s;
+        }
+        @keyframes wyd {
+            from {};
+            to {
+                transform: translateX(900px);
+                background-color: black;
+            }
+        }
+        @keyframes wyd2 {
+            0% {}
+            50% {
+                transform: translateX(450px) scale(2,-1) rotateZ(40deg);
+                background-color: red;
+                border-radius: 50%;
+                width: 500px;
+            }
+            100% {
+                transform: translateX(900px);
+            }
+        }   
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
+
+<!-- 
+定义一个动画（定义一组关键帧）
+animation: name duration timing-function delay direction fill-mode
+
+@keyframes name {
+    transform: translateX(40px)
+}
+-->

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1 {
+            height: 800px;
+            width: 600px;
+            padding: 20px;
+            border: 1px solid black;
+            margin: 0 auto;
+            background-image: repeating-linear-gradient(transparent 0px,transparent 29px, gray 30px);
+            background-clip: content-box;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: radial-gradient(at 80px 80px,white,gray);
+            box-shadow: 5px 10px 10px black;
+        }
+        .title {
+            color: #333;
+        }
+        .title span {
+            background: linear-gradient(to right, red, green) no-repeat right bottom;
+            background-size: 0 2px;
+            transition: background-size 1300ms;
+        }
+        .title span:hover {
+            background-position-x: left;
+            background-size: 100% 2px;
+        }
+        .bcgroud-test {
+            margin: 2px;
+            border: 10px red solid;
+            padding: 10px;
+            color: black;
+            background-color: pink;
+            width: fit-content;
+            height: 16px;
+        }
+        .bcgroud-test span {
+            border: 20px green solid;
+            padding: 30px;
+            background-color: yellow;
+            line-height: 16px;
+            /* font-size: 16px; */
+        }
+        .bcgroud-test:hover {
+            border-color: transparent;
+        }
+        .bcgroud-test:hover span {
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+    <!-- 信纸 -->
+    <div class="box1"></div>
+    <!-- 立体小球 -->
+    <div class="box2"></div>
+
+    <h2 class="title">
+        <span>CSS你永远学不会的语言</span>
+    </h2>
+
+    <div class="bcgroud-test">
+        <span>背景属性测试</span>
+    </div>
+</html>

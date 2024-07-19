@@ -4,6 +4,7 @@
 import { createRouter,createWebHashHistory,createWebHistory } from "vue-router";
 // 引入组件
 import Child from '@/components/Child.vue'
+import App from "@/App.vue";
 
 // 第二步：创建路由器
 const router = createRouter({
@@ -13,8 +14,8 @@ const router = createRouter({
     // 一个一个的路由规则
     routes: [
         {
-            path: '/child',
-            component: Child
+            path: '/',
+            component: App
         }
     ]
 })

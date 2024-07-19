@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <script>
+        // 浏览器对象模型(window是JS中的顶级对象)
+        // document、alert()、console.log()都是window的属性
+        // 所有通过var定义的全局变量、函数都会变成window的属性和方法
+
+        // 定时器
+        // 返回一个定时器的id
+        // const id = window.setInterval(()=>{
+        //     console.log('每5秒执行一次');
+        // },5000)
+        // clearInterval(id)
+
+        // const id2 = window.setTimeout(()=>{
+        //     console.log('5秒后执行一次');
+        // },5000)
+        // clearTimeout(id2)
+
+        // 1. navigator
+        // 2. location: 
+        // 3. document
+        // 4. history
+        // 5. screen
+
+
+        // 本地存储
+        // 只能存字符串值，复杂数据类型如何处理？
+        // JSON.stringify(复杂数据类型)
+        // JSON.parse(JSON字符串)
+        
+        // localStorage（关闭浏览器不会失效）
+        localStorage.setItem('name', 'zy')
+        // localStorage.getItem('name')
+        // localStorage.removeItem('name')
+ 
+        // sessionStorage（关闭浏览器就失效，其他和localStorage一样）
+
+
+
+
+    </script>
+</body>
+</html>

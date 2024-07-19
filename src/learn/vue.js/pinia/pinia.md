@@ -3,3 +3,5 @@
 
 Vue2：vuex
 Vue3：pinia
+
+多个组件共享数据

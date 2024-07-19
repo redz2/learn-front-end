@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .outer {
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 200px;
+            border: 2px solid black;
+            transform-style: preserve-3d;
+            perspective: 500px;
+        }
+        .inner {
+            height: 200px;
+            width: 200px;
+            background-color: skyblue;
+            transform: rotateX(30deg) translateZ(60px)
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            您好啊!
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!--
+1. 开启3D空间
+重要原则:元素进行3D变换的首要操作:父元素必须开启:3D空间!使用transform-style开启3D空间,可选值如下:
+flat:让子元素位于此元素的二维平面内(20空间)--默认值
+preserve-3d:让子元素位于此元素的三维空间内(3D空间)
+
+2. 设置景深
+何为景深?--指定观察者与z=0平面的距离,能让发生3D变换的元素,产生透视效果,看来更加立体。
+使用perspective设置景深,可选值如下:
+none:不指定透视--(默认值)
+长度值:指定观察者距离z=0平面的距离,不允许负值。
+注意:perspective设置给发生3D变换元素的父元素
+
+
+谁会用CSS写3D啊？JS才是最牛逼的
+-->

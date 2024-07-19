@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+</head>
+<body>
+    <div class="btn">
+        2999
+    </div>
+    <button>按钮</button>
+    <script>
+        const button = document.querySelector('button')
+        button.addEventListener('click',()=>{
+            animation(2000, 2999, 299, (value)=>{
+                const btn = document.querySelector('.btn')
+                btn.textContent = value.toFixed()
+            })
+        })
+    </script>
+    <script src="./animation.js"></script>
+</body>
+</html>

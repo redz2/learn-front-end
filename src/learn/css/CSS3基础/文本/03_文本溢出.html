@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            list-style: none;
+            font-size: 20px;
+            padding-left: 0;
+        }
+        li {
+            margin-top: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>xxxxxxxxxxxxx</li>
+        <li>xxxxxxxxxxxxxyyyyyyyyyyyyyyyyyyyadsadasdasdasdasdasdasda</li>
+        <li>xxxxxxxxxxxxx</li>
+        <li>xxxxxxxxxxxxx</li>
+        <li>xxxxxxxxxxxxx</li>
+    </ul>
+</body>
+</html>
+
+<!-- 
+overflow: 控制一个元素在另一个元素中的溢出
+
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis; 省略（默认值clip，暴力截断）
+-->

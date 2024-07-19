@@ -1,5 +1,8 @@
 // import './assets/main.css'
 
+// 引入emitter
+// import emitter from './learn/vue.js/vue3/组件通信/03_mitt/utils/emitter'
+
 // 引入createApp用于创建应用
 import { createApp } from 'vue'
 // 引入App根组件

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .outer {
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 200px;
+            border: 2px solid black;
+        }
+        .inner {
+            height: 200px;
+            width: 200px;
+            background-color: skyblue;
+            transform: translateX(50px) translateY(50px);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            您好啊!
+        </div>
+    </div>
+</body>
+</html>
+<!-- 
+1. 水平位移
+transform: translateX(50%); inner宽度的50% 
+2. 垂直位移
+transform: translateY(50%); inner高度的50%
+3. 水平垂直位移
+transform: translate(50%,50%)
+-->
+
+<!--
+1.位移与相对定位很相似,都不脱离文档流,不会影响到其它元素。
+2.与相对定位的区别:相对定位的百分比值,参考的是其父元素;定位的百分比值,参考的是其自身。
+3.浏览器针对位移有优化,与定位相比,浏览器处理位移的效率更高。
+4.transform可以链式编写,例如:transform: translateX(30px) translateY(40px);
+5.位移对行内元素无效。!!!!!!
+6.位移配合定位,可实现元素水平垂直居中
+body {
+    height: 100vh;
+    position: relative;
+}
+
+div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);  /* margin-left: -100px;margin-top: -100px;*/
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}
+-->

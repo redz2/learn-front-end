@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+        .box1 {
+            background-image: repeating-linear-gradient(red,yellow,green);
+        }
+        .box2 {
+            background-image: repeating-linear-gradient(to right top,red,yellow,green);
+        }
+        .box3 {
+            background-image: repeating-linear-gradient(20deg,red,yellow,green);
+        }
+        .box4 {
+            background-image: repeating-linear-gradient(red 50px,yellow 100px,green 150px);
+        }
+        .box5 {
+            background-image: repeating-linear-gradient(20deg,red 50px,yellow 100px,green 150px);
+            font-size: 20px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bold;
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">默认情况从上到下</div>
+    <div class="box box2">从左到右</div>
+    <div class="box box3">设置角度，顺时针转20度</div>
+    <div class="box box4">纯红|红黄|黄绿|纯绿</div>
+    <div class="box box5">你好啊</div>
+
+</body>
+</html>
+
+<!-- 
+重复渐变：在没有发生渐变的区域，重新开始渐变
+-->
